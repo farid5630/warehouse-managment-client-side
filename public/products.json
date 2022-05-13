@@ -1,0 +1,56 @@
+[
+  {
+    "id": "6277498ab05036d21a1166c6",
+    "name": "Pen",
+    "description": "Matador Ball pen normally is used high quality raw materials imported from Germany, Belgium, Korea, China and India. It is highly precise moulds, imported from Korea, ensures dimensional accuracy and flawless finishing of every part of pen",
+    "quantity": 52,
+    "supplier": "Matador",
+    "price": 600,
+    "images": "https://i.ibb.co/CzM44Cs/pen.jpg"
+  },
+  {
+    "id": "6277498aeece7715ff7a213a",
+    "name": "Rubber Eraser",
+    "description": "Erasers have a rubbery consistency and come in a variety of shapes, sizes and colors. Some pencils have an eraser on one end. Less expensive erasers are made from synthetic rubber and synthetic soy-based gum, but more expensive or specialized erasers are made from vinyl, plastic, or gum-like materials.",
+    "quantity": 67,
+    "supplier": "National Stationary",
+    "price": 549,
+    "images": "https://i.ibb.co/S644Q3s/rabbar.jpg"
+  },
+  {
+    "id": "6277498a114dc218782067cf",
+    "name": "Paper Punch Mechines",
+    "description": "A hole punch, also known as hole puncher, or paper puncher, is an office tool that is used to create holes in sheets of paper, often for the purpose of collecting the sheets in a binder or folder.",
+    "quantity": 70,
+    "supplier": "Kangaro",
+    "price": 732,
+    "images": "https://i.ibb.co/QvnNV1Q/pinUp.jpg"
+  },
+  {
+    "id": "6277498ad9b87457d7c3e3b2",
+    "name": "Note Book",
+    "description": "The first and most important theme is: Love conquers all. Although this idea is sometimes overworked, in this particular work, it is the most prevalent theme of all. No matter how many setbacks Allie and Noah faced, their love always brought them together again.",
+    "quantity": 64,
+    "supplier": "Arista Export",
+    "price": 585,
+    "images": "https://i.ibb.co/Ytk0JyS/noteBook.jpg"
+  },
+  {
+    "id": "6277498ae7af46d734efce70",
+    "name": "SDI Anti Cutter",
+    "description": "A utility knife is a knife used for general or utility purposes. The utility knife was originally a fixed blade knife with a cutting edge suitable for general work such as cutting hides and cordage, scraping hides, butchering animals, cleaning fish, and other tasks.",
+    "quantity": 66,
+    "supplier": "RFL",
+    "price": 569,
+    "images": "https://i.ibb.co/R9tnzWn/cutter.jpg"
+  },
+  {
+    "id": "6277498a5e2cb5c552642e00",
+    "name": "Writing khata",
+    "description": "Bashundhara Exercise Book (Bound Binding), 204 page (Math Khata, With Margin)",
+    "quantity": 55,
+    "supplier": "Bashundhara",
+    "price": 513,
+    "images": "https://i.ibb.co/BCWRjTG/khata.jpg"
+  }
+]
