@@ -1,23 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
+import useProducts from '../../../Hooks/useProducts';
 import Product from '../Product';
 
 const Products = () => {
-    const [products, setProducts] = useState([]);
+    const [products] = useProducts();
+    // const [products, setProducts] = useState([]);
 
-    console.log(products);
-    useEffect(() => {
-        fetch("products.json")
-            .then(res => res.json())
-            .then(data => setProducts(data))
-    }, [])
+    // useEffect(() => {
+    //     fetch("http://localhost:5000/products")
+    //       .then((res) => res.json())
+    //       .then((data) => setProducts(data));
+    // }, [])
     return (
-        <Container>
-            <h1 className='my-4 text-primary'>In Stock</h1>
+        <Container id="stock">
+            <h1 className='mt-5 mb-2 text-primary text-center'>In Stock</h1>
             <Row>
                 {
                     products.slice(0, 6).map(product => <Product
-                        key={product.id}
+                        key={product._id}
                         product={product}
                     ></Product>)
             }

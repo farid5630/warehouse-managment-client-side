@@ -3,7 +3,7 @@
     "id": "6277498ab05036d21a1166c6",
     "name": "Pen",
     "description": "Matador Ball pen normally is used high quality raw materials imported from Germany, Belgium, Korea, China and India. It is highly precise moulds, imported from Korea, ensures dimensional accuracy and flawless finishing of every part of pen",
-    "quantity": 52,
+    "quantity": 3,
     "supplier": "Matador",
     "price": 600,
     "images": "https://i.ibb.co/CzM44Cs/pen.jpg"
@@ -12,7 +12,7 @@
     "id": "6277498aeece7715ff7a213a",
     "name": "Rubber Eraser",
     "description": "Erasers have a rubbery consistency and come in a variety of shapes, sizes and colors. Some pencils have an eraser on one end. Less expensive erasers are made from synthetic rubber and synthetic soy-based gum, but more expensive or specialized erasers are made from vinyl, plastic, or gum-like materials.",
-    "quantity": 67,
+    "quantity": 0,
     "supplier": "National Stationary",
     "price": 549,
     "images": "https://i.ibb.co/S644Q3s/rabbar.jpg"

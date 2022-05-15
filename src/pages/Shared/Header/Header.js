@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import auth from "../../../firebase.init";
 
 const Header = () => {
-   const [user, loading, error] = useAuthState(auth);
+   const [user] = useAuthState(auth);
    const logOut = () => {
      signOut(auth);
    };
@@ -16,7 +16,7 @@ const Header = () => {
         <Container>
           <Navbar.Brand>
             <Link to="/" className="text-decoration-none text-dark">
-              React-Bootstrap
+              Stationary Stock
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -25,15 +25,26 @@ const Header = () => {
               <Nav.Link as={Link} to="/home">
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} to="/addProduct">
-                About
-              </Nav.Link>
+
               <Nav.Link as={Link} to="/blogs">
                 Blog
               </Nav.Link>
-              <Nav.Link as={Link} to="/home">
-                Pricing
+              <Nav.Link as={Link} to="/about">
+                About Us
               </Nav.Link>
+              {user && (
+                <div className="d-flex align-items-center">
+                  <Nav.Link as={Link} to="/addProduct">
+                    Add Product
+                  </Nav.Link>
+                  <Nav.Link as={Link} to="/manageProduct">
+                    Manage Product
+                  </Nav.Link>
+                  <Nav.Link as={Link} to="/myProduct">
+                    My Product
+                  </Nav.Link>
+                </div>
+              )}
             </Nav>
 
             <Nav className="ms-auto">

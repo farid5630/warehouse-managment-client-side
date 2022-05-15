@@ -1,21 +1,26 @@
 import React from "react";
 import { Col } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const Product = ({ product }) => {
-  const { name, images, price, description, quantity, supplier } = product;
+  const navigate = useNavigate();
+  const {_id, name, images, price, description, quantity, supplier } = product;
   let lowStock;
   let stockOut;
   if (quantity <= 5 || quantity === 0) {
-    lowStock = `${quantity} Low`;
+    lowStock = `${quantity}`;
     stockOut = " Stock Out";
+  }
+  const navigateToManageStock = id => {
+    navigate(`/manageStock/${id}`);
   }
   return (
     <Col md={12} lg={12}>
-      <div className="mx-auto card mb-3">
+      <div className="mx-auto shadow mb-3">
         <div className="row g-0">
-          <div className="col-sm-4 col-lg-3">
+          <div className="col-sm-4 col-lg-3 d-flex justify-content-center">
             <img
-              className="img-fluid px-2"
+              className="img-fluid p-2"
               src={images}
               alt=""
               style={{ height: "250px", objectFit: "cover" }}
@@ -31,25 +36,29 @@ const Product = ({ product }) => {
                   ? description.slice(0, 200) + "....."
                   : description}
               </p>
-              <div className="d-flex justify-content-between align-items-center">
+              <div className="d-md-flex justify-content-between align-items-center">
                 <div className="text-start">
                   <p className="text-muted mb-0">
-                    Price: ৳ <strong>{price}</strong>
+                    Price: ৳ <strong>{price} per catun</strong>
                   </p>
                   <p className="text-muted mb-0">
                     Stock:
-                    <strong className= {` me-1${quantity ? " " : "text-danger"}`}>
+                    <strong
+                      className={` me-1${quantity ? " " : "text-danger"}`}
+                    >
                       {quantity ? (
                         lowStock ? (
-                          <span className="text-warning">{lowStock}</span>
+                          <span className="text-warning">
+                            {" "}
+                            {lowStock} catun Low
+                          </span>
                         ) : (
-                          " " + quantity
+                          " " + quantity + " catun"
                         )
                       ) : (
-                        stockOut
+                        <span className="text-danger">{stockOut}</span>
                       )}
                     </strong>
-                    catun
                   </p>
                   <p className="text-muted mb-0">
                     Supplier:
@@ -60,8 +69,9 @@ const Product = ({ product }) => {
                 </div>
                 <div>
                   <button
-                    //   onClick={() => navigateToManageStock(_id)}
-                    className="btn btn-warning"
+                    // to=`/manageStock/${}`
+                      onClick={() => navigateToManageStock(_id)}
+                    className="btn btn-success"
                   >
                     Manage Stock
                   </button>
