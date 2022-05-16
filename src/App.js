@@ -22,21 +22,39 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
-        <Route
-          path="/manageProduct"
-          element={<ManageProduct></ManageProduct>}
-        ></Route>
-        <Route path="/addProduct" element={<AddProduct></AddProduct>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
-        <Route path="/myProduct" element={<MyProduct></MyProduct>}></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/about" element={<About></About>}></Route>
+        <Route
+          path="/manageProduct"
+          element={
+            <RequireAuth>
+              <ManageProduct></ManageProduct>
+            </RequireAuth>
+          }
+        ></Route>
         <Route
           path="/manageStock/:id"
           element={
             <RequireAuth>
               <ManageStock></ManageStock>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/myProduct"
+          element={
+            <RequireAuth>
+              <MyProduct></MyProduct>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/addProduct"
+          element={
+            <RequireAuth>
+              <AddProduct></AddProduct>
             </RequireAuth>
           }
         ></Route>
