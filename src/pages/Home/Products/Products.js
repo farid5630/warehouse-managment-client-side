@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import useProducts from '../../../Hooks/useProducts';
 import Product from '../Product';
 
@@ -23,6 +24,10 @@ const Products = () => {
                     ></Product>)
             }
             </Row>
+            <div className='d-flex justify-content-center mb-5'>
+                <Link to='/manageProduct' className="btn btn-success">Manage Product</Link>
+
+            </div>
         </Container>
     );
 };

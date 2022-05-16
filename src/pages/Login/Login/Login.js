@@ -22,21 +22,30 @@ const Login = () => {
   const from = location.state?.from?.pathname || "/";
 
   const navigate = useNavigate();
-  if (error) {
-    toast("User Sign in Faield...");
-  }
+  // if (error) {
+  //   toast("User Sign in Faield...");
+  // }
+  
   if (loading || sending) {
     return <Loading></Loading>;
   }
-
+let errorMessege;
   const handleSignEmailandPass = async (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
 
+ 
+   if (error) {
+    //  return toast("Password Not match");
+     return errorMessege = error.message;
+   }
+
     await signInWithEmailAndPassword(email, password);
     navigate(from, { replace: true });
   };
+
+ 
 
   const handleForget = async (e) => {
     const email = emailRef.current.value;
@@ -96,6 +105,7 @@ const Login = () => {
                   name="password"
                   placeholder="Password"
                 />
+                <p className="text-danger">{errorMessege}</p>
               </Col>
             </Form.Group>
 

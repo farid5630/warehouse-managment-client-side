@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import auth from "../../../firebase.init";
 
 const Header = () => {
-   const [user] = useAuthState(auth);
+  const [user] = useAuthState(auth);
    const logOut = () => {
      signOut(auth);
    };
@@ -50,7 +50,7 @@ const Header = () => {
             <Nav className="ms-auto">
               {user ? (
                 <div className="d-flex align-items-center">
-                  <p className="me-2 text-light m-0">{user?.displayName}</p>
+                  <p className="me-2 m-0">{user?.displayName}</p>
                   <button onClick={logOut}>Sign Out</button>
                 </div>
               ) : (
