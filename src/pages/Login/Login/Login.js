@@ -4,7 +4,7 @@ import {
   useSendPasswordResetEmail,
   useSignInWithEmailAndPassword,
 } from "react-firebase-hooks/auth";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link,  useLocation, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import auth from "../../../firebase.init";
 import SignGoogle from "../SignGoogle/SignGoogle";
@@ -111,9 +111,9 @@ const Login = () => {
               className="mb-3"
               controlId="formPlaintextPassword"
             >
-              <a href="#" onClick={handleForget}>
+              <Link to="#" onClick={handleForget}>
                 Forget Password
-              </a>
+              </Link>
               <Form.Label column sm="2"></Form.Label>
               <Col sm="10">
                 <Button variant="primary" type="submit">

@@ -12,7 +12,7 @@ const ManageProduct = () => {
     const proceed = window.confirm("Are you sure?");
     console.log(id);
     if (proceed) {
-      const url = `http://localhost:5000/product/${id}`;
+      const url = `https://rocky-island-00246.herokuapp.com/product/${id}`;
       fetch(url, {
         method: "DELETE",
       })

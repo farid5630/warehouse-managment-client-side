@@ -12,7 +12,7 @@ const MyProduct = () => {
 
     useEffect(() => {
         const email = user.email;
-        fetch(`http://localhost:5000/myProduct?email=${email}`)
+        fetch(`https://rocky-island-00246.herokuapp.com/myProduct?email=${email}`)
           .then((res) => res.json())
           .then((data) => setMyProducts(data));
 
@@ -22,7 +22,7 @@ const MyProduct = () => {
       const proceed = window.confirm("Are you sure?");
       console.log(id);
       if (proceed) {
-        const url = `http://localhost:5000/product/${id}`;
+        const url = `https://rocky-island-00246.herokuapp.com/product/${id}`;
         fetch(url, {
           method: "DELETE",
         })

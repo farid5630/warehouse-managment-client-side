@@ -12,7 +12,7 @@ const ManageStock = () => {
     manageStockItem;
 
   useEffect(() => {
-    fetch(`http://localhost:5000/manage/${id}`)
+    fetch(`https://rocky-island-00246.herokuapp.com/manage/${id}`)
       .then((res) => res.json())
       .then((data) => setManageStockItem(data));
   }, [id, quantity]);
@@ -25,7 +25,7 @@ const ManageStock = () => {
   }
 
   let handleQuantityUpdate = (newQuantity) => {
-    const url = `http://localhost:5000/manage/${id}`;
+    const url = `https://rocky-island-00246.herokuapp.com/manage/${id}`;
     axios
       .put(url, { quantity: newQuantity })
       .then((response) => {

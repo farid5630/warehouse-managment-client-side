@@ -11,7 +11,7 @@ const AddProduct = () => {
     
     const onSubmit = (data, e) => {
         // console.log(data);
-        const url = `http://localhost:5000/product`;
+        const url = `https://rocky-island-00246.herokuapp.com/product`;
          fetch(url, {
            method: "POST",
            headers: {
